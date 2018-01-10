@@ -8,7 +8,8 @@
     "prepush": "npm run lint",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
-    "test:coverage": "nyc npm test"
+    "test:coverage": "nyc npm test",
+    "start": "./node_modules/.bin/webpack-dev-server"
   },
   "nyc": {
     "functions": 80,
@@ -39,6 +40,7 @@
   "homepage": "https://github.com/luanmillnitz/spotify-wrapper-player#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
@@ -47,7 +49,9 @@
     "eslint-plugin-import": "^2.8.0",
     "husky": "^0.14.3",
     "mocha": "^4.0.1",
-    "nyc": "^11.4.1"
+    "nyc": "^11.4.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
   },
   "dependencies": {
     "jscs": "^3.0.7"
